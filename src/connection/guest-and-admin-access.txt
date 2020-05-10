@@ -1,0 +1,13 @@
+
+Use this codes to insert default username and password.
+
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES (NULL, 'admin', 'Password@2020');
+
+$sql = "INSERT INTO `admin` (`id`, `username`, `password`) VALUES (NULL, \'admin\', \'Password@2020\')";
+
+
+INSERT INTO `guest` (`id`, `username`, `password`) VALUES (NULL, 'guest', 'Password@1010');
+
+$sql = "INSERT INTO `guest` (`id`, `username`, `password`) VALUES (NULL, \'guest\', \'Password@1010\')";
+

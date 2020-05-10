@@ -10,33 +10,43 @@
 
 <body>
 
-<?php
+    <?php
+
+    
+    $full_names     =   $_POST["full_names"];
+    $password  =   $_POST["password"];
+    $access_level = $_POST["access_level"];
 
 
-$full_names     =   $_POST["full_names"];
-$email_address  =   $_POST["email_address"];
+    echo "Username is : " .$full_names. "<br>" ;
+    echo "Access level is : " .$access_level. "<br>" ;
+    
 
-$sql = "INSERT INTO `five_costly_mistakes` (`id`, `full_names`, `email_address`) VALUES (NULL, '$full_names', '$email_address')";
 
-if ($conn->query($sql) === TRUE) {
-    echo "fetching data...";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+/*
+    $sql = "INSERT INTO `five_costly_mistakes` (`id`, `full_names`, `email_address`) VALUES (NULL, '$full_names', '$email_address')";
 
-$conn->close();
+    if ($conn->query($sql) === TRUE) {
+        echo "fetching data...";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
-$to = $email_address;
-$subject = "Kehinde Ajose";
+    $conn->close();
 
-$txt = "Thank you ".$full_names. " (" .$email_address.  ") for requesting a copy of my book. Get the ebook here: https://goo.gl/mgjgjb";
+    $to = $email_address;
+    $subject = "Kehinde Ajose";
 
-$headers = "From: kehinde@kennisplace.com" . "\r\n" .
-"CC: ajose.kehinde@gmail.com";
+    $txt = "Thank you ".$full_names. " (" .$email_address.  ") for requesting a copy of my book. Get the ebook here: https://goo.gl/mgjgjb";
 
-mail($to,$subject,$txt,$headers);
+    $headers = "From: kehinde@kennisplace.com" . "\r\n" .
+    "CC: ajose.kehinde@gmail.com";
 
-?> 
+    mail($to,$subject,$txt,$headers);
+
+     
+*/
+?>
 
 </body>
 

@@ -18,26 +18,25 @@
 
 	<div class="container">
   		<div class="jumbotron">
-  			<h1 class="display-4">Bemo Academic Consulting</h1>
+  			<h1 class="display-4"><span class="user_text">Bemo Academic Consulting</span></h1>
   			<h4 class="lead">Please kindly enter your username, password and access level to login</h4>
   			<hr class="my-4">
   			<p>
   				<form action="src/process.php" method="post">
 
   					<div class="form-group">
-					    <label for="exampleInputPassword1"><span class="text-color">Full names</span></label>
-					    <input type="text" class="form-control" id="exampleInputPassword1" name="full_names" placeholder="Full Names" required>
+					    <label for="full_names"><span class="user_text">Full names</span></label>
+					    <input type="text" class="form-control" id="full_names" name="full_names" placeholder="Full Names" required>
 					 </div>
 
 					 <div class="form-group">
-					    <label for="exampleInputEmail1"><span class="text-color">Email address</span></label>
-					    <input type="email" class="form-control" id="exampleInputEmail1" name="email_address" aria-describedby="emailHelp" placeholder="Enter email" required>
-					    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					    <label for="password"><span class="user_text">Password</span></label>
+					    <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
 					 </div>
 
 					 <div class="form-group">
-						<label for="cars"><span class="text-color">Access level:</span></label>
-							<select id="cars" class="form-control" required>
+						<label for="access_level"><span class="user_text">Access level:</span></label>
+							<select id="access_level" name="access_level" class="form-control" required>
 							<option value="" class="form-control">Select an Option</option>
 							<option value="admin" class="form-control">Admin</option>
 							<option value="guest" class="form-control">Guest</option>
