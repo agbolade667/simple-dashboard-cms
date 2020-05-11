@@ -50,9 +50,3 @@
 </body>
 </html>
 
-<?php
-
-echo "Other PHP codes";
-
-?>
-

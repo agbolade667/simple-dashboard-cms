@@ -17,10 +17,6 @@ include './connection/conn.php';
     $password     =   $_POST['password'];
     $access_level =   $_POST['access_level'];   
 
-    
-    echo "Password is : " .$password. "<br>" ;
-    echo "Access level is : " .$access_level. "<br>" ;
-    
     if($access_level == "guest"){
         
         $sql = "SELECT username, password FROM guest";
