@@ -4,7 +4,8 @@
 	
 		
     <div id="hwrap">
-                <header class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+
+            <header class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
                 <div id="headwrap">
                 
                         <div id="titlelogo">
@@ -24,7 +25,14 @@
                             
                             <div id="nwrap">
                                 <div id="menuBtn"></div>
-                                <nav><ul class="navigation"><li id="current"><a href="index-2.html" rel="self" id="current">Main</a></li><li><a href="how-to-prepare-for-cda-interview.html" rel="self">How To Prepare</a></li><li><a href="sample-cda-interview-questions.html" rel="self">CDA Interview Questions</a></li><li><a href="contact-us.html" rel="self">Contact Us</a></li></ul></nav>						
+                                <nav>
+                                    <ul class="navigation">
+                                        <li id="current"><a href="index-2.html" rel="self" id="current">Main</a></li>
+                                        <li><a href="#" rel="self">How To Prepare</a></li>
+                                        <li><a href="#" rel="self">CDA Interview Questions</a></li>
+                                        <li><a href="contact-us.html" rel="self">Contact Us</a></li>
+                                    </ul>
+                                </nav>						
                             </div>
                     </div>
                 </header>

@@ -6,12 +6,13 @@
 	
 <head>
 
-	<meta name="online" content="true">
-	<meta name="viewport" content="initial-scale=1 maximum-scale=1"/>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="description" content="FREE Ultimate Guide to CDA Interviews: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Structured Interview. " />
-		
-		<title>FREE Ultimate Guide to CDA Interviews: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Structured Interview. </title>
+    <!-- Meta title and meta descriptions go here -->
+        
+    <?php include '../partials/meta_descriptions.php'; ?>
+
+    <!-- Meta description ends here -->	
+    
+        <title>FREE Ultimate Guide to CDA Interviews: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Structured Interview. </title>
 		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/Endeavor/styles.css"  />
 		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/Endeavor/colourtag-page0.css"  />
 		<link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes/Endeavor/flexslider.css"  />
@@ -54,10 +55,7 @@
 		<link rel='stylesheet' type='text/css' media='all' href='index_files/stacks_page_page0.css' />
 		<script type='text/javascript' charset='utf-8' src='index_files/stacks_page_page0.js'></script>
 
-		<head>
-<meta property="og:image" content="http://cdainterview.com/resources/cda-interview-guide.jpg" />
-<head>
-	<!-- Start Google Analytics -->
+
 <script>
     //Google analytics codes go here
 </script>
@@ -65,23 +63,25 @@
 <script>
     //Facebook pixel codes go here
 </script>
+
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=235586069975455&amp;ev=NoScript" /></noscript><!-- End Google Analytics -->
+
 </head>
 		
 <body>
 
 <!-- Header content goes here -->
 
-    <?php include './header.php'; ?>
+    <?php include '../partials/header.php'; ?>
                     
     <section>
         <!-- content goes here -->
-        <?php include './content.php'; ?>
+        <?php include '../partials/content.php'; ?>
 	</section>
                                 
 <!-- Footer content goes here -->
 
-    <?php include './footer.php'; ?>
+    <?php include '../partials/footer.php'; ?>
 
 </body>
 
