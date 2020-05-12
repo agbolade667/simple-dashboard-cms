@@ -8,12 +8,26 @@
 <html lang="en">
 
 <head>
+    <style>
+        .update-content {
+        background-color: #A540B9; /* Purple */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radio: 10px;
+    }
+</style>
+
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard by Creative Tim
+    Bemo Academic Consulting
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -28,49 +42,46 @@
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
-        Tip 2: you can also add an image using data-image tag
-    -->
       <div class="logo"><a href="#" class="simple-text logo-normal">
-          Creative Tim
+          WELCOME
         </a></div>
-      <div class="sidebar-wrapper">
+      
+      
+        <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
+          <li class="nav-item  active">
             <a class="nav-link" href="./dashboard.html">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
+              <i class="material-icons">content_paste</i>
+              <p>Content</p>
             </a>
           </li>
+
           <li class="nav-item ">
             <a class="nav-link" href="./user.html">
-              <i class="material-icons">person</i>
-              <p>User Profile</p>
+              <i class="material-icons">dashboard</i>
+              <p>Meta data</p>
             </a>
           </li>
-          <li class="nav-item active ">
+
+          <li class="nav-item  ">
             <a class="nav-link" href="./tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <i class="material-icons">place</i>
+              <p>Contact page</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
-              <i class="material-icons">library_books</i>
-              <p>Typography</p>
-            </a>
-          </li>
+
         </ul>
+
       </div>
     </div>
+
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Table List</a>
+            <a class="navbar-brand" href="javascript:;">Bemo Academic Consulting</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -88,9 +99,11 @@
                 </button>
               </div>
             </form>
+      
+      
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="javascript:;">
+                <a class="nav-link" href="#">
                   <i class="material-icons">dashboard</i>
                   <p class="d-lg-none d-md-block">
                     Stats
@@ -98,7 +111,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
                   <span class="notification">5</span>
                   <p class="d-lg-none d-md-block">
@@ -106,11 +119,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
+                  <a class="dropdown-item" href="#">No notification for now</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -132,192 +141,81 @@
         </div>
       </nav>
       <!-- End Navbar -->
+
+
+
       <div class="content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Simple Table</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
+                  <h4 class="card-title ">Admin Dashboard</h4>
+                  <p class="card-category"> </p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
                         <th>
-                          ID
+                          Section
                         </th>
+
                         <th>
-                          Name
+                          Content
                         </th>
+
                         <th>
-                          Country
+                          Action
                         </th>
-                        <th>
-                          City
-                        </th>
-                        <th>
-                          Salary
-                        </th>
+                        
                       </thead>
                       <tbody>
+                     
                         <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td class="text-primary">
-                            $36,738
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td class="text-primary">
-                            $23,789
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td class="text-primary">
-                            $56,142
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td class="text-primary">
-                            $38,735
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td class="text-primary">
-                            $63,542
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td class="text-primary">
-                            $78,615
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-12">
-              <div class="card card-plain">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title mt-0"> Table on Plain Background</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
-                </div>
-            
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-hover">
-                      <thead class="">
-                        <th>
-                          ID
-                        </th>
-                        <th>
-                          Name
-                        </th>
-                        <th>
-                          Country
-                        </th>
-                        <th>
-                          City
-                        </th>
-                        <th>
-                          Salary
-                        </th>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td>
-                            $36,738
-                          </td>
+                            <td>
+                              Header
+                            </td>
+                            <td>
+                              Header content
+                            </td>
+                            <td>
+                                <form action="#">
+                                    <button type="submit" class="update-content">UPDATE</button>
+                                </form>
+                            </td>
                         </tr>
 
+                        <tr>
+                            <td>
+                              Content
+                            </td>
+                            <td>
+                              Actual Content
+                            </td>
+    
+                            <td>
+                                <form action="#">
+                                    <button type="submit" class="update-content">UPDATE</button>
+                                </form>
+                            </td>
+                        </tr>
 
+                        <tr>
+                            <td>
+                              Footer
+                            </td>
+                            <td>
+                              Footer Content
+                            </td>
+                            
+                            <td>
+                                <form action="#">
+                                    <button type="submit" class="update-content">UPDATE</button>
+                                </form>
+                            </td>
+
+                        </tr>
                         
                       </tbody>
                     </table>
@@ -325,31 +223,30 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+
+            
       <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
               <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
+                <a href="#">
+                  Home
                 </a>
               </li>
               <li>
-                <a href="https://creative-tim.com/presentation">
+                <a href="#">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="http://blog.creative-tim.com">
+                <a href="#">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
+                <a href="#">
+                  Contact
                 </a>
               </li>
             </ul>
@@ -359,80 +256,14 @@
             <script>
               document.write(new Date().getFullYear())
             </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            <a href="#" target="_blank">Creative Tim</a> Material Dashboard.
           </div>
         </div>
       </footer>
     </div>
   </div>
-  <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
-      <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Filters</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger active-color">
-            <div class="badge-colors ml-auto mr-auto">
-              <span class="badge filter badge-purple" data-color="purple"></span>
-              <span class="badge filter badge-azure" data-color="azure"></span>
-              <span class="badge filter badge-green" data-color="green"></span>
-              <span class="badge filter badge-warning" data-color="orange"></span>
-              <span class="badge filter badge-danger" data-color="danger"></span>
-              <span class="badge filter badge-rose active" data-color="rose"></span>
-            </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="header-title">Images</li>
-        <li class="active">
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-1.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-2.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-3.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-4.jpg" alt="">
-          </a>
-        </li>
-        <li class="button-container">
-          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
-        </li>
-        <!-- <li class="header-title">Want more components?</li>
-            <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                  Get the pro version
-                </a>
-            </li> -->
-        <li class="button-container">
-          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
-            View Documentation
-          </a>
-        </li>
-        <li class="button-container github-star">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-        </li>
-        <li class="header-title">Thank you for 95 shares!</li>
-        <li class="button-container text-center">
-          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-          <br>
-          <br>
-        </li>
-      </ul>
-    </div>
-  </div>
+
+
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>

@@ -6,6 +6,8 @@ include './connection/conn.php';
 <html>
 
 <head>
+<script src="https://cdn.tiny.cloud/1/b61bhps62lf8h8z88zlzckv4c572bk6dpfws3i9clwpp0p0m/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
 </head>
 
 <body>
@@ -38,6 +40,8 @@ if ($result->num_rows > 0) {
         echo "Content: <br> <textarea rows='10' cols='100'>$content</textarea><br>"; 
         echo "Footer: <br> <textarea rows='10' cols='100'>$footer</textarea><br>"; 
         echo "</form>";
+
+        echo "<br><br>$header";
     } 
 
 }
@@ -45,6 +49,16 @@ if ($result->num_rows > 0) {
 
     $conn->close();
   
+echo "  <script>
+    tinymce.init({
+      selector: 'textarea',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name'
+    });
+  </script> ";
+
 
 ?>
 
