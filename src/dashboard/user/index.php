@@ -1,7 +1,29 @@
 <?php
+include '../../connection/conn.php';
 
-/* Some PHP codes */
 
+$sql = "SELECT * FROM index_page";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+  //Fetch rows from the database if it exists (that is, greater than zero)
+
+    while($row = $result->fetch_assoc()) {
+
+        $meta_info = $row['meta_info'];
+        $google_analytics = $row['google_analytics'];
+        $facebook_pixel = $row['facebook_pixel'];
+        //$logo = $row['logo'];
+        //$content_image = $row['content_image'];
+        $header = $row['header'];
+        $content = $row['content'];
+        $footer = $row['footer'];
+
+    } 
+
+}
+  
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +45,9 @@
 </style>
 
   <meta charset="utf-8" />
+
+  <script src="https://cdn.tiny.cloud/1/b61bhps62lf8h8z88zlzckv4c572bk6dpfws3i9clwpp0p0m/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -177,7 +202,7 @@
                               Header
                             </td>
                             <td>
-                              Header content
+                            <?php echo "<textarea rows='10' cols='100'>$header</textarea>"; ?>
                             </td>
                             <td>
                                 <form action="#">
@@ -191,7 +216,7 @@
                               Content
                             </td>
                             <td>
-                              Actual Content
+                            <?php echo "<textarea rows='10' cols='100'>$content</textarea>"; ?>
                             </td>
     
                             <td>
@@ -206,7 +231,7 @@
                               Footer
                             </td>
                             <td>
-                              Footer Content
+                            <?php echo "<textarea rows='10' cols='100'>$footer</textarea>"; ?>
                             </td>
                             
                             <td>
@@ -216,7 +241,8 @@
                             </td>
 
                         </tr>
-                        
+
+
                       </tbody>
                     </table>
                   </div>
@@ -263,6 +289,20 @@
     </div>
   </div>
 
+  <!-- Tiny Mice JS Files -->
+
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: "code",
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name'
+    });
+  </script>
+
+  <!-- End Tiny Mice JS files -->
 
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
@@ -481,8 +521,8 @@
 
   <?php
   
-  /* Some PHP codes */
-  
+  $conn->close();
+
   ?>
 
 </body>
