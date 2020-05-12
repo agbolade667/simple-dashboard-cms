@@ -15,7 +15,12 @@ $app = new Image;
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <button class="default btn-add" onClick="javascript:window.location.href='?upload'">Upload</button><br/>
+    
+	<!-- 
+	Upload button is disabled
+	<button class="default btn-add" onClick="javascript:window.location.href='?upload'">Upload</button><br/>
+	-->
+	
     <table>
         <tr>
             <th style="width:10px;">ID</th>
