@@ -1,28 +1,8 @@
 <?php
+
 include '../../connection/conn.php';
-
-
-$sql = "SELECT * FROM index_page";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-
-  //Fetch rows from the database if it exists (that is, greater than zero)
-
-    while($row = $result->fetch_assoc()) {
-
-        $meta_info = $row['meta_info'];
-        $google_analytics = $row['google_analytics'];
-        $facebook_pixel = $row['facebook_pixel'];
-        //$logo = $row['logo'];
-        //$content_image = $row['content_image'];
-        $header = $row['header'];
-        $content = $row['content'];
-        $footer = $row['footer'];
-
-    } 
-
-}
+require_once 'class/Image.php';
+$app = new Image;
   
 ?>
 
@@ -75,7 +55,7 @@ if ($result->num_rows > 0) {
       
         <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  active">
+          <li class="nav-item  ">
             <a class="nav-link" href="./index.php">
               <i class="material-icons">content_paste</i>
               <p>Content</p>
@@ -89,7 +69,7 @@ if ($result->num_rows > 0) {
             </a>
           </li>
 
-          <li class="nav-item  ">
+          <li class="nav-item  active">
             <a class="nav-link" href="./contact.php">
               <i class="material-icons">place</i>
               <p>Contact page</p>
@@ -180,71 +160,71 @@ if ($result->num_rows > 0) {
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table">
-                      <thead class=" text-primary">
-                        <th>
-                          Section
-                        </th>
+                    
+                    
+                    
+                    
+                  <table>
+        <tr>
+            <th style="width:10px;">ID</th>
+            <th>IMAGE</th>
+            <th style="width:150px;"></th>
+        </tr>
+        <?php
+            $stmt = $app->query("SELECT id, image_name FROM images");
+            $stmt->execute();
+            while ($row = $stmt->fetch()) {
+        ?>
+        <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td><img width="20%" src="upload/<?php echo $row['image_name']; ?>"></td>
+            <td>
+                <button class="default" onClick="javascript:window.location.href='?update&id=<?php echo $row['id']; ?>'">update</button>
+                <!-- <button class="cancel" onClick="javascript:window.location.href='process.php?id=<?php echo $row['id']; ?>'">delete</button>-->
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
 
-                        <th>
-                          Content
-                        </th>
+    <hr>
 
-                        <th>
-                          Action
-                        </th>
-                        
-                      </thead>
-                      <tbody>
-                     
-                        <tr>
-                            <td>
-                              Header
-                            </td>
-                            <td>
-                            <?php echo "<textarea rows='10' cols='100'>$header</textarea>"; ?>
-                            </td>
-                            <td>
-                                <form action="#">
-                                    <button type="submit" class="update-content">UPDATE</button>
-                                </form>
-                            </td>
-                        </tr>
+    <!-- Upload -->
+    <?php
+    if (isset($_GET['upload'])) {
+        if (isset($_GET['error'])) {
+    ?>
+        <div class="error"><?php echo $_GET['error']; ?></div>
+        <?php } ?>
+        <h4>Upload Form</h4>
+        <form action="process.php" method="post" enctype="multipart/form-data">
+            Image: <input required type="file" name="image" id="image" accept="image/*"><br>
+            <button type="submit" class="default" name="upload">Submit</button>
+            <button type="button" class="cancel" onClick="javascript:window.location.href='./'">Cancel</button>
+        </form>
+    <?php } ?>
 
-                        <tr>
-                            <td>
-                              Content
-                            </td>
-                            <td>
-                            <?php echo "<textarea rows='10' cols='100'>$content</textarea>"; ?>
-                            </td>
-    
-                            <td>
-                                <form action="#">
-                                    <button type="submit" class="update-content">UPDATE</button>
-                                </form>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                              Footer
-                            </td>
-                            <td>
-                            <?php echo "<textarea rows='10' cols='100'>$footer</textarea>"; ?>
-                            </td>
-                            
-                            <td>
-                                <form action="#">
-                                    <button type="submit" class="update-content">UPDATE</button>
-                                </form>
-                            </td>
-
-                        </tr>
+    <!-- Update -->
+    <?php
+    if (isset($_GET['update'])) {
+        // get image info
+        $update = $app->query("SELECT image_name FROM images WHERE id=?");
+        $update->execute([$_GET['id']]);
+        $rowUpdate = $update->fetch();
+        if (isset($_GET['error'])) {
+    ?>
+        <div class="error"><?php echo $_GET['error']; ?></div>
+        <?php } ?>
+        <h4>Update Form</h4>
+        <form action="process.php" method="post" enctype="multipart/form-data">
+            <img width="50%" src="upload/<?php echo $rowUpdate['image_name']; ?>"><br>
+            Image: <input required type="file" name="image" id="image" accept="image/*"><br>
+            <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+            <button class="default" type="submit" name="update">Submit</button>
+            <button type="button" class="cancel" onClick="javascript:window.location.href='./'">Cancel</button>
+        </form>
+    <?php } ?>
 
 
-                      </tbody>
-                    </table>
                   </div>
                 </div>
               </div>

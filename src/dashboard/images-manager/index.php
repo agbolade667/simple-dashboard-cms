@@ -37,7 +37,7 @@ $app = new Image;
             <td><img width="20%" src="upload/<?php echo $row['image_name']; ?>"></td>
             <td>
                 <button class="default" onClick="javascript:window.location.href='?update&id=<?php echo $row['id']; ?>'">update</button>
-                <button class="cancel" onClick="javascript:window.location.href='process.php?id=<?php echo $row['id']; ?>'">delete</button>
+                <!-- <button class="cancel" onClick="javascript:window.location.href='process.php?id=<?php echo $row['id']; ?>'">delete</button>-->
             </td>
         </tr>
         <?php } ?>
