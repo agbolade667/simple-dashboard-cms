@@ -66,6 +66,10 @@
     //Facebook pixel codes go here
 </script>
 
+<script>
+    //No-index status goes here
+</script>
+
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=235586069975455&amp;ev=NoScript" /></noscript><!-- End Google Analytics -->
 
 </head>

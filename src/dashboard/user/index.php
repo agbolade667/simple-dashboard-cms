@@ -76,21 +76,21 @@ if ($result->num_rows > 0) {
         <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item  active">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="./index.php">
               <i class="material-icons">content_paste</i>
               <p>Content</p>
             </a>
           </li>
 
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="./meta-tags.php">
               <i class="material-icons">dashboard</i>
               <p>Meta data</p>
             </a>
           </li>
 
           <li class="nav-item  ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="./contact.php">
               <i class="material-icons">place</i>
               <p>Contact page</p>
             </a>

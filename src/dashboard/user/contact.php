@@ -14,7 +14,12 @@ if ($result->num_rows > 0) {
         $meta_info = $row['meta_info'];
         $google_analytics = $row['google_analytics'];
         $facebook_pixel = $row['facebook_pixel'];
-        $no_index = $row['crawler'];
+        //$logo = $row['logo'];
+        //$content_image = $row['content_image'];
+        $header = $row['header'];
+        $content = $row['content'];
+        $footer = $row['footer'];
+
     } 
 
 }
@@ -77,14 +82,14 @@ if ($result->num_rows > 0) {
             </a>
           </li>
 
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="./meta-tags.php">
               <i class="material-icons">dashboard</i>
               <p>Meta data</p>
             </a>
           </li>
 
-          <li class="nav-item  ">
+          <li class="nav-item  active">
             <a class="nav-link" href="./contact.php">
               <i class="material-icons">place</i>
               <p>Contact page</p>
@@ -194,10 +199,10 @@ if ($result->num_rows > 0) {
                      
                         <tr>
                             <td>
-                            Meta tags
+                              Header
                             </td>
                             <td>
-                            <?php echo "<textarea rows='10' cols='100'>$meta_info</textarea>"; ?>
+                            <?php echo "<textarea rows='10' cols='100'>$header</textarea>"; ?>
                             </td>
                             <td>
                                 <form action="#">
@@ -208,10 +213,10 @@ if ($result->num_rows > 0) {
 
                         <tr>
                             <td>
-                            Google analytics codes
+                              Content
                             </td>
                             <td>
-                            <?php echo "<textarea rows='10' cols='100'>$google_analytics</textarea>"; ?>
+                            <?php echo "<textarea rows='10' cols='100'>$content</textarea>"; ?>
                             </td>
     
                             <td>
@@ -223,33 +228,10 @@ if ($result->num_rows > 0) {
 
                         <tr>
                             <td>
-                            Facebook pixel codes
+                              Footer
                             </td>
                             <td>
-                            <?php echo "<textarea rows='10' cols='100'>$facebook_pixel</textarea>"; ?>
-                            </td>
-                            
-                            <td>
-                                <form action="#">
-                                    <button type="submit" class="update-content">UPDATE</button>
-                                </form>
-                            </td>
-                        </tr>
-
-                        
-                        <tr>
-                            <td>
-                            No index setting
-                            </td>
-                            <td>
-                                <label for="no_index">Do you want search engines to crawl your website?</label>
-
-                                <select id="no_index">
-                                <option value="<meta name='robots' content='noindex'>">Select an option</option>
-                                    <option value="<meta name='robots' content='noindex'>">True</option>
-                                    <option value="">False</option>
-                                </select>
-                            
+                            <?php echo "<textarea rows='10' cols='100'>$footer</textarea>"; ?>
                             </td>
                             
                             <td>
@@ -259,6 +241,7 @@ if ($result->num_rows > 0) {
                             </td>
 
                         </tr>
+
 
                       </tbody>
                     </table>
@@ -305,6 +288,21 @@ if ($result->num_rows > 0) {
       </footer>
     </div>
   </div>
+
+  <!-- Tiny Mice JS Files -->
+
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: "code",
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name'
+    });
+  </script>
+
+  <!-- End Tiny Mice JS files -->
 
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
